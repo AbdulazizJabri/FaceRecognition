@@ -83,3 +83,5 @@ while cv2.waitKey(1) < 0:
         cv2.imshow("Age Gender Demo", frameFace)
 
     print("time : {:.3f}".format(time.time() - t))
+
+    vs.stop()
