@@ -110,7 +110,7 @@ while True:
 
     if key == ord("q"):
 
-        break 
+        break
 
 # do a bit of cleanup
 
