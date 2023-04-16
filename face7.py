@@ -116,7 +116,4 @@ while True:
 
 cv2.destroyAllWindows()
 
-<<<<<<< HEAD
 vs.stop()
-=======
->>>>>>> 116c2f7e90a75714f30af94a65c0f8f287d395b0
