@@ -1,7 +1,5 @@
 import cv2
 
-import math
-
 def highlightFace(net, frame, conf_threshold=0.7):
 
     frameOpencvDnn=frame.copy()
@@ -67,7 +65,6 @@ video=cv2.VideoCapture(0)
 padding=20
 
 while True:
-
     hasFrame,frame=video.read()
     frame = cv2.resize(frame,None,None,fx=1.5,fy=1.5)
     resultImg,faceBoxes=highlightFace(faceNet,frame)
@@ -88,7 +85,7 @@ while True:
 
         gender=genderList[genderPreds[0].argmax()]
 
-#        print(f'Gender: {gender}')
+        print(f'Gender: {gender}')
 
         ageNet.setInput(blob)
 
@@ -96,7 +93,7 @@ while True:
 
         age=ageList[agePreds[0].argmax()]
 
- #       print(f'Age: {age[1:-1]} years')
+        print(f'Age: {age[1:-1]} years')
 
         text = "{}:{}".format(gender, age)
 
@@ -107,13 +104,7 @@ while True:
     key = cv2.waitKey(1) & 0xFF
 
     # if the `q` key was pressed, break from the loop
-
     if key == ord("q"):
-
         break
 
-# do a bit of cleanup
-
 cv2.destroyAllWindows()
-
-vs.stop()
